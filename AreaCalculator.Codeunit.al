@@ -6,7 +6,7 @@ codeunit 50000 AreaCalculator
     procedure CalculateArea()
     var
         Shape: Record Shape;
-        ShapeCharacteristicProvider: Interface ShapeCharacteristicProvider;
+        ShapeCharacteristicProvider: Interface TwoDimensionalShapeProvider;
         TotalArea: Decimal;
     begin
         TotalArea := 0;

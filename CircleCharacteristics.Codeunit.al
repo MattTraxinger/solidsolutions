@@ -1,4 +1,4 @@
-codeunit 50002 CircleCharacteristics implements ShapeCharacteristicProvider
+codeunit 50002 CircleCharacteristics implements TwoDimensionalShapeProvider
 {
     procedure CalculateArea(Shape: Record Shape): Decimal
     var
@@ -8,9 +8,5 @@ codeunit 50002 CircleCharacteristics implements ShapeCharacteristicProvider
         Circle.SetRange(SystemId, Shape.ShapeId);
         Circle.FindFirst();
         exit(Math.Pi() * Math.Pow(Circle.Radius, 2));
-    end;
-
-    procedure CalculateVolume(Shape: Record Shape): Decimal
-    begin
     end;
 }

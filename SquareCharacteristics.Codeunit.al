@@ -1,4 +1,4 @@
-codeunit 50003 SquareCharacteristics implements ShapeCharacteristicProvider
+codeunit 50003 SquareCharacteristics implements TwoDimensionalShapeProvider
 {
     procedure CalculateArea(Shape: Record Shape): Decimal
     var
@@ -8,9 +8,5 @@ codeunit 50003 SquareCharacteristics implements ShapeCharacteristicProvider
         Square.SetRange(SystemId, Shape.ShapeId);
         Square.FindFirst();
         exit(Math.Pow(Square.Length, 2));
-    end;
-
-    procedure CalculateVolume(Shape: Record Shape): Decimal
-    begin
     end;
 }

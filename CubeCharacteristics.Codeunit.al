@@ -1,9 +1,5 @@
-codeunit 50005 CubeCharacteristics implements ShapeCharacteristicProvider
+codeunit 50005 CubeCharacteristics implements ThreeDimensionalShapeProvider
 {
-    procedure CalculateArea(Shape: Record Shape): Decimal
-    begin
-    end;
-
     procedure CalculateVolume(Shape: Record Shape): Decimal
     var
         Cube: Record Cube;

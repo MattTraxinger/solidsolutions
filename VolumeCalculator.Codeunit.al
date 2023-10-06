@@ -6,7 +6,7 @@ codeunit 50004 VolumeCalculator
     procedure CalculateVolume()
     var
         Shape: Record Shape;
-        ShapeCharacteristicProvider: Interface ShapeCharacteristicProvider;
+        ShapeCharacteristicProvider: Interface ThreeDimensionalShapeProvider;
         TotalVolume: Decimal;
     begin
         TotalVolume := 0;
