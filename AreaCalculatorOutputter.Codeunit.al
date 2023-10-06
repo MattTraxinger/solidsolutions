@@ -5,7 +5,7 @@ codeunit 50001 AreaCalculatorOutputter
     var
         AreaMsg: Label 'The calculated area is %1.';
     begin
-        Message(AreaMsg, AreaCalculator.CalculateArea());
+        Message(AreaMsg, AreaCalculator.GetResult());
     end;
 
     procedure AsJson(AreaCalculator: Codeunit AreaCalculator): JsonObject
@@ -13,7 +13,7 @@ codeunit 50001 AreaCalculatorOutputter
         AreaLabel: Label 'Area';
         ShapeAreaObject: JsonObject;
     begin
-        ShapeAreaObject.Add(AreaLabel, AreaCalculator.CalculateArea());
+        ShapeAreaObject.Add(AreaLabel, AreaCalculator.GetResult());
         exit(ShapeAreaObject);
     end;
 }

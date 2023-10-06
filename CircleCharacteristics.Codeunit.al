@@ -9,4 +9,8 @@ codeunit 50002 CircleCharacteristics implements ShapeCharacteristicProvider
         Circle.FindFirst();
         exit(Math.Pi() * Math.Pow(Circle.Radius, 2));
     end;
+
+    procedure CalculateVolume(Shape: Record Shape): Decimal
+    begin
+    end;
 }

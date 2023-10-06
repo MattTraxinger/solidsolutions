@@ -1,22 +1,22 @@
-codeunit 50000 AreaCalculator
+codeunit 50004 VolumeCalculator
 {
     var
         Calculator: Codeunit ShapeCalculator;
 
-    procedure CalculateArea()
+    procedure CalculateVolume()
     var
         Shape: Record Shape;
         ShapeCharacteristicProvider: Interface ShapeCharacteristicProvider;
-        TotalArea: Decimal;
+        TotalVolume: Decimal;
     begin
-        TotalArea := 0;
+        TotalVolume := 0;
         Calculator.GetShapes(Shape);
         if Shape.FindSet() then
             repeat
                 ShapeCharacteristicProvider := Shape.ShapeType;
-                TotalArea += ShapeCharacteristicProvider.CalculateArea(Shape);
+                TotalVolume += ShapeCharacteristicProvider.CalculateVolume(Shape);
             until Shape.Next() = 0;
-        Calculator.SetResult(TotalArea);
+        Calculator.SetResult(TotalVolume);
     end;
 
     procedure GetResult(): Decimal

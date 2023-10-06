@@ -9,4 +9,8 @@ codeunit 50003 SquareCharacteristics implements ShapeCharacteristicProvider
         Square.FindFirst();
         exit(Math.Pow(Square.Length, 2));
     end;
+
+    procedure CalculateVolume(Shape: Record Shape): Decimal
+    begin
+    end;
 }
