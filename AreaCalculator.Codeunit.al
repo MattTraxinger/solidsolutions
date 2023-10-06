@@ -37,11 +37,4 @@ codeunit 50000 AreaCalculator
             until Shape.Next() = 0;
         exit(TotalArea);
     end;
-
-    procedure DisplayArea()
-    var
-        AreaMsg: Label 'The calculated area is %1.';
-    begin
-        Message(AreaMsg, CalculateArea());
-    end;
 }
